@@ -1,0 +1,131 @@
+body {
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  height: 100vh; /* 브라우저 높이 100% */
+  margin: 0;
+  background-color: #222; /* 배경색 설정 (선택 사항) */
+  overflow: hidden;
+}
+
+#game-container {
+  position: relative;
+  width: 1440px; /* 고정 너비 */
+  height: 1024px; /* 고정 높이 */
+  margin: 0 auto; /* 화면 가운데 정렬 */
+  overflow: hidden;
+  background-image: url("../img/background.png");
+  background-size: cover; /* 배경 이미지가 화면을 꽉 채우도록 */
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #000; /* 디버깅용으로 경계 확인 (선택 사항) */
+}
+
+#bottle-container {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto; /* 세로 스크롤 활성화 */
+  overflow-x: hidden; /* 가로 스크롤 숨김 */
+  width: 250px; /* 병 크기 */
+  height: auto; /* 높이는 자동으로 설정 */
+  max-height: 80vh; /* 화면 크기에 맞게 병 컨테이너의 최대 높이 설정 */
+  padding-right: 10px;
+}
+/* 병 스타일 */
+.bottle {
+  width: 250px; /* 병 크기 */
+  height: 250px; /* 병 크기 (원본 크기) */
+  margin-bottom: 15px; /* 병 간 간격 */
+  background-size: contain; /* 배경 이미지가 병 안에 맞도록 조정 */
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.bottle .fairy {
+  position: absolute;
+  bottom: 10px; /* 병 입구에서 10px 위로 */
+  width: 50px; /* 요정 크기 */
+  height: 50px; /* 요정 크기 */
+  background-size: cover; /* 이미지 비율에 맞춰 크기 조정 */
+  background-repeat: no-repeat;
+  cursor: pointer; /* 요정 클릭 가능하게 */
+  z-index: 1; /* 병 이미지보다 위에 배치 */
+}
+
+#yellow-bottle {
+  background-image: url("../img/yellow_bottle_image.png");
+}
+
+#red-bottle {
+  background-image: url("../img/red_bottle_image.png");
+}
+
+#green-bottle {
+  background-image: url("../img/green_bottle_image.png");
+}
+
+#blue-bottle {
+  background-image: url("../img/blue_bottle_image.png");
+}
+
+#rainbow-bottle {
+  background-image: url("../img/rainbow_bottle_image.png");
+}
+
+.fairy {
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.07s ease; /* opacity 애니메이션 시간을 단축 */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 요정별 이미지 설정 */
+.fairy.yellow {
+  background-image: url("../img/yellow_fairy.png");
+}
+
+.fairy.red {
+  background-image: url("../img/red_fairy.png");
+}
+
+.fairy.green {
+  background-image: url("../img/green_fairy.png");
+}
+
+.fairy.blue {
+  background-image: url("../img/blue_fairy.png");
+}
+
+.fairy.rainbow {
+  background-image: url("../img/rainbow_fairy.png");
+}
+
+#fairy-container .fairy {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  cursor: pointer;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
