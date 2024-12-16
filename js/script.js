@@ -190,7 +190,7 @@ $(document).ready(function () {
     timer = setInterval(() => {
       if (gameTime > 0) {
         gameTime--;
-        timerElement.text(`Time Left: ${gameTime}s`);
+        timerElement.text(`남은 시간: ${gameTime}s`);
       } else {
         endGame(); // 시간이 끝나면 게임 종료
       }

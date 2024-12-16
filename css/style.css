@@ -115,6 +115,76 @@ body {
   cursor: pointer;
 }
 
+/* 여기부터는 mainpage 스타일 속성 */
+
+.game-container-mainpage {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* 자식 요소를 세로 방향으로 배치 */
+  width: 1440px;
+  height: 1024px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-image: url("../img/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center; /* 자식 요소를 수평으로 가운데 정렬 */
+}
+
+.Title-container {
+  width: 800px;
+  height: 480px;
+  position: relative;
+}
+
+.Next-button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 10px;
+  right: 50px;
+  background-image: url("../img/next_button.png");
+}
+
+.Main-content-container {
+  display: flex;
+  justify-content: center;
+  width: 1440px;
+  height: 496px;
+  margin-top: 48px;
+}
+
+.Button-container {
+  margin-right: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 360px;
+  height: 496px;
+}
+
+.Button-gamestart {
+  width: 360px;
+  height: 104px;
+  background-image: url("../img/startbutton.png");
+  cursor: pointer;
+}
+
+.Button-description {
+  width: 360px;
+  height: 104px;
+  background-image: url("../img/descriptionbutton.png");
+  cursor: pointer;
+}
+
+.Character-image {
+  width: 496px;
+  height: 496px;
+  background-image: url("../img/character.png");
+}
+
 @keyframes fadeInOut {
   0% {
     opacity: 0;
