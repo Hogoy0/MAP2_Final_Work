@@ -202,7 +202,7 @@ $(document).ready(function () {
     clearInterval(timer); // 타이머 종료
     clearInterval(spawnInterval); // 요정 생성 멈춤
     $("#fairy-container").off(); // 요정 클릭 이벤트 비활성화
-    alert(`Game Over! Your final score is ${score}.`); // 최종 점수 표시
+    alert(`아침이 밝았어! 잡은 요정은 ${score} 마리야.`); // 최종 점수 표시
     $("#fairy-container").remove();
     $("#timer").remove();
     $("#score-text").remove();
