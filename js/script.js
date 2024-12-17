@@ -3,7 +3,7 @@ $(document).ready(function () {
   let rainbowActive = false; // 무지개 요정 활성화 여부
   let holdTimeout; // 파란 요정의 클릭 유지 타이머
   let timer; // 게임 타이머
-  let gameTime = 10; // 게임 제한 시간 (초)
+  let gameTime = 60; // 게임 제한 시간 (초)
 
   // 병에 요정 넣기 함수 (이미지로 추가)
   function addFairyToBottle(bottleId, fairyType) {
@@ -207,12 +207,30 @@ $(document).ready(function () {
     $("#timer").remove();
     $("#score-text").remove();
     $("#score").remove();
-    $("#game-container").css({
-      "background-image": `url(${"../img/result_fail.png"})`,
-    });
+    if (score >= 80) {
+      $("#game-container").css(
+        "background-image",
+        "url(./img/result_success.png)"
+      ); // 성공 이미지
+    } else {
+      $("#game-container").css(
+        "background-image",
+        "url(./img/result_fail.png)"
+      ); // 실패 이미지
+    }
+    $("#game-container").append('<div class="restart-button"></div>');
+    $("#game-container").append('<div class="mainmenu-button"></div>');
   }
 
   // 게임 시작
   const spawnInterval = setInterval(spawnFairy, 750); // 0.75초마다 요정 생성
   startGameTimer(); // 타이머 시작
+});
+
+$(document).on("click", ".restart-button", function () {
+  window.location.reload(); // 현재 페이지 새로고침
+});
+
+$(document).on("click", ".mainmenu-button", function () {
+  window.location.href = "index.html"; // 이동할 페이지 경로
 });

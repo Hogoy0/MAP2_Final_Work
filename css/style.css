@@ -144,8 +144,28 @@ body {
   height: 50px;
   position: absolute;
   bottom: 10px;
-  right: 50px;
+  right: 10px;
   background-image: url("../img/next_button.png");
+}
+
+.restart-button {
+  cursor: pointer;
+  width: 360px;
+  height: 104px;
+  position: absolute;
+  bottom: 70px;
+  right: 600px;
+  background-image: url("../img/restart.png");
+}
+
+.mainmenu-button {
+  cursor: pointer;
+  width: 360px;
+  height: 104px;
+  position: absolute;
+  bottom: 70px;
+  right: 100px;
+  background-image: url("../img/mainmenu.png");
 }
 
 .Main-content-container {
